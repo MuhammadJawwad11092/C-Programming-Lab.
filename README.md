@@ -2,6 +2,15 @@
 Hello in this lab task I am doing Create and Format Markdown Elements.
 **I study at Fast-Nuces Karachi Campus and doing BS CS its written in bold**,and *I love to play tennis its  written in Italics*.
 ~~Learningnewgithubconcpetsisreallyfun.~~
+
+## Task List
+
+- [x] Create a GitHub repository  
+- [x] Write a Hello World program in C  
+- [ ] Learn Git Concepts Clearly  
+- [ ] Explore more feautes and Uses of Github  
+
+
 ## Hello World in c language Code:
 Here’s a simple code block that prints Hello World:  
 
@@ -13,9 +22,4 @@ int main() {
 }
 
 
-## Task List
 
-- [x] Create a GitHub repository  
-- [x] Write a Hello World program in C  
-- [ ] Learn Git Concepts Clearly  
-- [ ] Explore more feautes and Uses of Github  
