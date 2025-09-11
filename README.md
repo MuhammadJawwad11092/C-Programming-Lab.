@@ -8,7 +8,7 @@ Hello in this lab task I am doing Create and Format Markdown Elements.
 - [x] Create a GitHub repository  
 - [x] Write a Hello World program in C  
 - [ ] Learn Git Concepts Clearly  
-- [ ] Explore more feautes and Uses of Github  
+- [ ] Explore more feautes with Uses of Github 
 
 
 ## Hello World in c language Code:
