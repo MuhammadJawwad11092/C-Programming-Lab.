@@ -1,21 +1,8 @@
 #include <stdio.h>
 
-
-int factorial(int n) {
-    int i, fact = 1;
-    for(i = 1; i <= n; i++) {
-        fact = fact * i;
-    }
-    return fact;
-}
-
-
-int combination(int n, int r) {
-    return factorial(n) / (factorial(r) * factorial(n - r));
-}
-
-int main() {
-    int n, i, j;
+int main()
+{
+    int n, i, j, num;
 
     printf("Enter number of rows for Pascal's Triangle: ");
     scanf("%d", &n);
@@ -23,16 +10,22 @@ int main() {
     printf("\nPascal's Triangle:\n");
 
 
-    for(i = 0; i < n; i++) {
-
-  
-        for(j = 0; j < n - i - 1; j++) {
+    for(i = 0; i < n; i++)
+    {
+    
+        for(j = 0; j < n - i - 1; j++)
+        {
             printf(" ");
         }
 
- 
-        for(j = 0; j <= i; j++) {
-            printf("%d ", combination(i, j));
+        num = 1; 
+
+     
+        for(j = 0; j <= i; j++)
+        {
+            printf("%d ", num);
+
+            num = num * (i - j) / (j + 1);
         }
 
         printf("\n");
@@ -40,3 +33,4 @@ int main() {
 
     return 0;
 }
+
