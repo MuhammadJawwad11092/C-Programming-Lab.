@@ -1,0 +1,62 @@
+#include <stdio.h>
+
+int main()
+{
+    int matrix[3][3], transpose[3][3], rotated[3][3];
+    int i, j, same = 1;
+
+    printf("Enter elements of a 3x3 matrix:\n");
+    for(i = 0; i < 3; i++)
+    {
+        for(j = 0; j < 3; j++)
+        {
+            printf("Element [%d][%d]: ", i+1, j+1);
+            scanf("%d", &matrix[i][j]);
+        }
+    }
+
+    for(i = 0; i < 3; i++)
+    {
+        for(j = 0; j < 3; j++)
+        {
+            transpose[j][i] = matrix[i][j];
+        }
+    }
+
+    for(i = 0; i < 3; i++)
+    {
+        for(j = 0; j < 3; j++)
+        {
+            rotated[i][j] = transpose[i][2 - j]; 
+        }
+    }
+
+    for(i = 0; i < 3; i++)
+    {
+        for(j = 0; j < 3; j++)
+        {
+            if(rotated[i][j] != matrix[i][j])
+            {
+                same = 0;
+                break;
+            }
+        }
+    }
+
+    printf("\nRotated Matrix (90 degrees clockwise):\n");
+    for(i = 0; i < 3; i++)
+    {
+        for(j = 0; j < 3; j++)
+        {
+            printf("%d\t", rotated[i][j]);
+        }
+        printf("\n");
+    }
+
+    if(same)
+        printf("\nThe rotated matrix is the SAME as the original.\n");
+    else
+        printf("\nThe rotated matrix is DIFFERENT from the original.\n");
+
+    return 0;
+}
