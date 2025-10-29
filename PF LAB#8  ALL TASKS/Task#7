@@ -1,0 +1,43 @@
+#include <stdio.h>
+int main(){
+	
+	int matrix1[3][3], matrix2[3][3], matrixproduct[3][3];
+	int i, j, k;
+
+
+	for(i = 0; i < 3; i++){
+		for(j = 0; j < 3; j++){
+			printf("Enter element [%d][%d] of Matrix 1: ", i+1, j+1);
+			scanf("%d", &matrix1[i][j]);
+		}
+	}
+
+
+	for(i = 0; i < 3; i++){
+		for(j = 0; j < 3; j++){
+			printf("Enter element [%d][%d] of Matrix 2: ", i+1, j+1);
+			scanf("%d", &matrix2[i][j]);
+		}
+	}
+
+
+	for(i = 0; i < 3; i++){
+		for(j = 0; j < 3; j++){
+			matrixproduct[i][j] = 0;  
+			for(k = 0; k < 3; k++){
+				matrixproduct[i][j] += matrix1[i][k] * matrix2[k][j];
+			}
+		}
+	}
+
+
+	printf("\nProduct of the two matrices:\n");
+	for(i = 0; i < 3; i++){
+		for(j = 0; j < 3; j++){
+			printf("%d\t", matrixproduct[i][j]);
+		}
+		printf("\n");
+	}
+
+	return 0;
+}
