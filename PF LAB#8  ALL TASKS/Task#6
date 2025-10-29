@@ -1,0 +1,47 @@
+#include <stdio.h>
+
+int main()
+{
+	 int i, j;
+    int original[3][3], transpose[3][3];
+   
+    printf("Enter Elements of a 3x3 matrix:\n");
+    for(i = 0; i < 3; i++)
+    {
+        for(j = 0; j < 3; j++)
+        {
+            printf("Element [%d][%d]: ", i+1, j+1);
+            scanf("%d", &original[i][j]);
+        }
+    }
+
+    for(i = 0; i < 3; i++)
+    {
+        for(j = 0; j < 3; j++)
+        {
+            transpose[j][i] = original[i][j];
+        }
+    }
+
+    printf("Original Matrix:\n");
+    for(i = 0; i < 3; i++)
+    {
+        for(j = 0; j < 3; j++)
+        {
+            printf("%d\t", original[i][j]);
+        }
+        printf("\n");
+    }
+
+    printf("Transpose Matrix:\n");
+    for(i = 0; i < 3; i++)
+    {
+        for(j = 0; j < 3; j++)
+        {
+            printf("%d\t", transpose[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
