@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() {
+    int intVar = 42;
+    float floatVar = 3.14;
+    char charVar = 'A';
+    void *ptr;
+
+    ptr = &intVar;
+    printf("Integer value: %d\n", *(int *)ptr);
+
+    ptr = &floatVar;
+    printf("Float value: %.2f\n", *(float *)ptr);
+
+    ptr = &charVar;
+    printf("Character value: %c\n", *(char *)ptr);
+
+    return 0;
+}
