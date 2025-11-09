@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+void calculate(int x, int y, int *total, float *average) {
+    *total = x + y;
+    *average = (*total) / 2.0;
+}
+
+int main() {
+    int value1 = 15;
+    int value2 = 25;
+    int resultSum;
+    float resultAvg;
+
+    calculate(value1, value2, &resultSum, &resultAvg);
+
+    printf("Sum = %d\n", resultSum);
+    printf("Average = %.2f\n", resultAvg);
+
+    return 0;
+}
