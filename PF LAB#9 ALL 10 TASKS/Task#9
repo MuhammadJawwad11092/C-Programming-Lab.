@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+int add(int a, int b) {
+    return a + b;
+}
+
+int subtract(int a, int b) {
+    return a - b;
+}
+
+int multiply(int a, int b) {
+    return a * b;
+}
+
+float divide(int a, int b) {
+    return (float)a / b;
+}
+
+int main() {
+    int num1, num2, choice;
+    printf("Enter two numbers: ");
+    scanf("%d %d", &num1, &num2);
+    printf("Choose operation: 1-Add 2-Subtract 3-Multiply 4-Divide: ");
+    scanf("%d", &choice);
+
+    if (choice == 4) {
+        float (*funcPtr)(int, int);
+        funcPtr = divide;
+        printf("Result = %.2f\n", funcPtr(num1, num2));
+    } else {
+        int (*funcPtr)(int, int);
+        if (choice == 1) funcPtr = add;
+        else if (choice == 2) funcPtr = subtract;
+        else if (choice == 3) funcPtr = multiply;
+        else {
+            printf("Invalid choice\n");
+            return 0;
+        }
+        printf("Result = %d\n", funcPtr(num1, num2));
+    }
+
+    return 0;
+}
