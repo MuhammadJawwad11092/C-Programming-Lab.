@@ -1,0 +1,16 @@
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main(){
+
+char word[100];
+
+printf(&quot;Enter a Code WOrd :&quot;);
+scanf(&quot;%s&quot;,&amp;word);
+
+int length=strlen(word);
+
+printf(&quot;The Code Word is %s has %d characters.\n&quot;, word ,
+length);
+return 0;
+}
