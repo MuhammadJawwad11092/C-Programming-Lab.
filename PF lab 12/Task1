@@ -1,0 +1,16 @@
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+int main(){
+int *arr=malloc(5* sizeof(int));
+int i;
+
+for(i=0;i&lt;5;i++){
+arr[i]=i+1;
+}
+printf(&quot;6th element : %d\n&quot;, arr[5]);
+
+free(arr);
+
+return 0;
+}
